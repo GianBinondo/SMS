@@ -8,5 +8,6 @@
         event EventHandler LoginEvent;
 
         void ShowMessage(string message);
+        void ShowForm();
     }
 }

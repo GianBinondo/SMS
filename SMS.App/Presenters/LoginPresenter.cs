@@ -46,6 +46,8 @@ namespace SMS.App.Presenters
 
                     IProgramView programView = new ProgramView();
                     new ProgramPresenter(programView);
+
+                    _view.ShowForm();
                 }
                 else
                 {
