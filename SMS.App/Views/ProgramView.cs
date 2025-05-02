@@ -60,5 +60,10 @@ namespace SMS.App
         {
             MessageBox.Show(message);
         }
+
+        public void ShowForm()
+        {
+            Show();
+        }
     }
 }

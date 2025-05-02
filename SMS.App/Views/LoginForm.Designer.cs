@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             label1 = new Label();
             label2 = new Label();
             textBoxUserName = new TextBox();
             textBoxPassword = new TextBox();
             buttonLogin = new Button();
+            guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
+            guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             SuspendLayout();
             // 
             // label1
@@ -64,6 +67,7 @@
             // 
             textBoxPassword.Location = new Point(323, 202);
             textBoxPassword.Name = "textBoxPassword";
+            textBoxPassword.PasswordChar = '*';
             textBoxPassword.Size = new Size(247, 27);
             textBoxPassword.TabIndex = 3;
             // 
@@ -77,6 +81,17 @@
             buttonLogin.UseVisualStyleBackColor = true;
             buttonLogin.Click += buttonLogin_Click;
             // 
+            // guna2BorderlessForm1
+            // 
+            guna2BorderlessForm1.ContainerControl = this;
+            guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
+            // guna2Elipse1
+            // 
+            guna2Elipse1.BorderRadius = 20;
+            guna2Elipse1.TargetControl = this;
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -87,6 +102,7 @@
             Controls.Add(textBoxUserName);
             Controls.Add(label2);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "LoginForm";
             Text = "LoginForm";
             ResumeLayout(false);
@@ -100,5 +116,7 @@
         private TextBox textBoxUserName;
         private TextBox textBoxPassword;
         private Button buttonLogin;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }
