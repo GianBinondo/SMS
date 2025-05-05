@@ -12,8 +12,8 @@ using SMS.Infastructure.Data;
 namespace SMS.Infastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250423053939_AddUser")]
-    partial class AddUser
+    [Migration("20250502061100_initalDb")]
+    partial class initalDb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -225,14 +225,14 @@ namespace SMS.Infastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "f8dff6df-34b7-4bcf-9366-3be7be67827a",
+                            Id = "ef8591d9-93c4-489a-a19d-1335093600d8",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "b0a5ebe4-f638-469b-8deb-3e367e0eb754",
+                            ConcurrencyStamp = "992e9d85-996f-4961-a3a9-3797600927d5",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEGXRVAgKo7Il0p5KIJTxWpd7WcRPs3MUFiQYI9l8uzvqDzLak73ETyQrPDYFUreB5Q==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEGPWmFc5SHBFV6opdB4i2A7KW4B8Sipup83IhP5L/yNc64Oo2By7FrzgUtuMd0Od7g==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "5ce28af2-3409-4f06-879c-2017ec5f7c9b",
+                            SecurityStamp = "bca1ce8c-7d23-4054-959f-71f25bc2c1b6",
                             TwoFactorEnabled = false,
                             UserName = "admin"
                         });
@@ -278,16 +278,13 @@ namespace SMS.Infastructure.Migrations
                     b.Property<int>("ProgramId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ProgramsProgramId")
-                        .HasColumnType("int");
-
                     b.Property<string>("StudentName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("StudentId");
 
-                    b.HasIndex("ProgramsProgramId");
+                    b.HasIndex("ProgramId");
 
                     b.ToTable("Students");
                 });
@@ -345,13 +342,13 @@ namespace SMS.Infastructure.Migrations
 
             modelBuilder.Entity("SMS.Domain.Student", b =>
                 {
-                    b.HasOne("SMS.Domain.Programs", "Programs")
+                    b.HasOne("SMS.Domain.Programs", "Program")
                         .WithMany()
-                        .HasForeignKey("ProgramsProgramId")
+                        .HasForeignKey("ProgramId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Programs");
+                    b.Navigation("Program");
                 });
 #pragma warning restore 612, 618
         }

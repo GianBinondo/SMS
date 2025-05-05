@@ -16,10 +16,12 @@ namespace SMS.App
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            ILoginForm view = new LoginForm();
-            new LoginPresenter(view);
+            //ILoginForm view = new LoginForm();
+            //new LoginPresenter(view);
 
-            Application.Run((Form)view);
+            //Application.Run((Form)view);
+
+            Application.Run(new MainView());
         }
     }
 }
