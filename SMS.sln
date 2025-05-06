@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMS.Infastructure", "SMS.In
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{9B418816-41A0-4457-88F4-6B69A1D855C7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "Sample\Sample.csproj", "{96D8D774-DD65-4785-B7C2-51D1CE1D03B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{9B418816-41A0-4457-88F4-6B69A1D855C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B418816-41A0-4457-88F4-6B69A1D855C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B418816-41A0-4457-88F4-6B69A1D855C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96D8D774-DD65-4785-B7C2-51D1CE1D03B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96D8D774-DD65-4785-B7C2-51D1CE1D03B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96D8D774-DD65-4785-B7C2-51D1CE1D03B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96D8D774-DD65-4785-B7C2-51D1CE1D03B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
